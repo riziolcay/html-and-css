@@ -1,0 +1,52 @@
+/* styleB.css
+   First five boxes lined up horizontally in the top-left corner and never
+   wrap, even if the window is too narrow. The sixth (final) box is fixed
+   to the bottom-right corner of the window at all times. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    font-size: 40px;
+    white-space: nowrap;
+}
+
+#container {
+    white-space: nowrap;
+}
+
+.box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 150px;
+    background-color: #eeeff2;
+    border-left: 10px dotted #d0d0ff;
+    padding: 10px;
+    margin-right: 10px;
+    text-align: center;
+    cursor: default;
+}
+
+.box:hover {
+    background-color: #ffff00;
+    color: #daa520;
+    cursor: pointer;
+}
+
+/* The final box sits fixed in the bottom-right corner of the window. */
+#box6 {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin-right: 0;
+}
